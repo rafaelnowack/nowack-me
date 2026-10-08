@@ -1237,3 +1237,31 @@ footer > span {
     transition: none !important;
   }
 }
+
+/* Friendly, photo-free homepage hero. Scoped to preserve the rest of the site. */
+.hero { padding-top: 76px; padding-bottom: 35px; }
+.hero .eyebrow { font-size: 12px; letter-spacing: 1.65px; }
+.hero h1 { margin-bottom: 40px; font-size: clamp(52px, 6.8vw, 102px); line-height: 1.08; }
+.hero .hero-bottom { align-items: center; gap: 56px; }
+.hero .hero-message { flex: 1; max-width: 655px; }
+.hero .hero-intro { font-size: 20px; line-height: 1.6; color: var(--paper); max-width: 620px; }
+.hero .hero-benefits { font-size: 16px; line-height: 1.7; margin-top: 17px; max-width: 570px; }
+.hero .hero-action { flex: 0 0 320px; align-items: stretch; gap: 13px; }
+.hero .button { border-radius: 6px; font-size: 16px; padding: 20px 22px; text-align: center; }
+.hero .hero-helper { font-size: 13px; line-height: 1.6; text-align: center; }
+.hero .hero-location { border-top: 1px solid var(--line); margin: 45px 0 0; padding-top: 20px; font-size: 13px; letter-spacing: .3px; }
+@media (max-width: 1050px) {
+  .hero .hero-bottom { gap: 32px; }
+  .hero .hero-action { flex-basis: 290px; }
+  .hero .hero-intro { font-size: 18px; }
+}
+@media (max-width: 700px) {
+  .hero { padding-top: 43px; padding-bottom: 20px; }
+  .hero .eyebrow { font-size: 11px; letter-spacing: 1px; }
+  .hero h1 { font-size: clamp(38px, 9.6vw, 64px); letter-spacing: -1.7px; margin: 25px 0 27px; }
+  .hero .hero-intro { font-size: 18px; }
+  .hero .hero-benefits { font-size: 16px; margin-top: 16px; }
+  .hero .hero-action { margin-top: 29px; width: 100%; }
+  .hero .button { width: 100%; }
+  .hero .hero-location { margin-top: 30px; }
+}
