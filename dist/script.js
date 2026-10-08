@@ -1,8 +1,9 @@
 const descriptions = [
-  'Turn the questions your buyers ask into clear website content, useful resources, and a reason to get in touch.',
-  'Route an inquiry to the right person, capture it in your CRM, and prepare a useful follow-up for your team to review.',
-  'Bring inquiry details into a draft proposal, flag missing information, and keep final pricing and approval with your team.'
+  'Replace scattered print ads and untracked flyers with a 360° digital lead engine. Capture high-intent local buyers with clear positioning and immediate reasons to get in touch.',
+  'Cut quote turnaround from days to minutes. Route leads instantly to your CRM, prepare pre-drafted estimates, and keep final pricing and human approval strictly with your team.',
+  'Stop losing hours to repetitive paperwork and shared-drive searches. AI retrieves company specs, SOPs, and project history so your team focuses on high-value delivery.'
 ];
+
 document.querySelectorAll('.flow').forEach(button => {
   button.addEventListener('click', () => {
     document.querySelectorAll('.flow').forEach(item => {
@@ -10,7 +11,15 @@ document.querySelectorAll('.flow').forEach(button => {
       item.classList.toggle('active', selected);
       item.setAttribute('aria-pressed', String(selected));
     });
-    document.getElementById('flow-detail').textContent = descriptions[Number(button.dataset.step)];
+    const step = Number(button.dataset.step);
+    const detailEl = document.getElementById('flow-detail');
+    if (detailEl && descriptions[step]) {
+      detailEl.textContent = descriptions[step];
+    }
   });
 });
-document.getElementById('year').textContent = new Date().getFullYear();
+
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
